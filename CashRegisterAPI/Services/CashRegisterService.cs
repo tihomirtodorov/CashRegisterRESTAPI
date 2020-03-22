@@ -136,7 +136,7 @@ namespace CashRegisterAPI.Services
 
                 if (withdrawAmount >= currentNoteKey)
                 {
-                    while (currentNoteValueCount > 0 && withdrawAmount > 0)
+                    while (currentNoteValueCount > 0 && withdrawAmount > 0 && withdrawAmount >= currentNoteKey)
                     {
                         withdrawAmount = withdrawAmount - currentNoteKey;
                         currentNoteValueCount--;
